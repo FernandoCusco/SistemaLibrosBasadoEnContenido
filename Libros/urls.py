@@ -15,8 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include           #include permite incluir archivos o app externas en este caso libro
+from apps.libro.views import Home
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('libro/', include(('apps.libro.urls','libro')))   #include 1er param: ruta de archio urls, 2param: nombre
+    path('libro/', include(('apps.libro.urls','libro'))),   #include 1er param: ruta de archio urls, 2param: nombre
+    path('home/', Home, name = 'index')
 ]

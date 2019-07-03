@@ -7,8 +7,9 @@ class Autor(models.Model):
     nombre = models.CharField('Nombres',max_length = 255, blank = False, null = False)
     apellidos = models.CharField('Apellidos', max_length = 255, blank = False, null = False)
     nacionalidad = models.CharField('Nacionalidad', max_length = 50, blank = False, null = False)
-    descripcion = models.CharField('Descripcion', max_length = 50, blank = True, null = True)
+    descripcion = models.TextField('Descripcion',blank = False, null = False)
     fecha_creacion = models.DateField('Fecha de creacion', auto_now = True, auto_now_add = False)
+
 
     class Meta:
         verbose_name = 'Autor'

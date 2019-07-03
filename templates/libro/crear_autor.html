@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Añadir nuevo Autor</title>
+  </head>
+  <body>
+    <form method="POST">
+       {% csrf_token %}
+      {{ autor_form.as_p }}
+      <button type="submit">Añadir</button>
+    </form>
+  </body>
+</html>
