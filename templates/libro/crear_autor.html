@@ -1,14 +1,13 @@
-<!DOCTYPE html>
-<html lang="es" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Añadir nuevo Autor</title>
-  </head>
-  <body>
+{% extends 'index.html' %}
+{% block title %}
+  Añadir Autor
+{% endblock title %}
+
+{% block body %}
     <form method="POST">
-       {% csrf_token %}
+      {% csrf_token %}
       {{ autor_form.as_p }}
+
       <button type="submit">Añadir</button>
     </form>
-  </body>
-</html>
+{% endblock body %}
