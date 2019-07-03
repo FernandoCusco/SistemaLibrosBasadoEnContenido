@@ -6,8 +6,11 @@
 {% block body %}
     <form method="POST">
       {% csrf_token %}
+      {% if error %}
+        <h2>No existe el autor indicado{{ error }}</h2>
+      {% else %}
       {{ autor_form.as_p }}
-
       <button type="submit">Añadir</button>
+      {% endif %}
     </form>
 {% endblock body %}
