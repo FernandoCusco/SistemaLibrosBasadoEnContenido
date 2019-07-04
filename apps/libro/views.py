@@ -10,8 +10,8 @@ def Home(request):
 
 def crearAutor(request):
     if request.method == 'POST':
+        print(request.POST)
         autor_form = AutorForm(request.POST)
-        print(autor_form)
 
         if autor_form.is_valid():
             autor_form.save()
